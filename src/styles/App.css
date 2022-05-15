@@ -109,6 +109,30 @@
     cursor: pointer;
 }
 
+@media (max-width: 830px){
+    .container {
+        margin: 100px 10% 40px 10%;
+    }
+}
+
+@media (max-width: 630px){
+    .container {
+        margin: 50px 5% 40px 5%;
+    }
+
+    .container_resumen {
+        height: 140px;
+    }
+
+    .comment {
+        height: 180px;
+    }
+
+    .comment_like_dislike {
+        width: 50%;
+    }
+}
+
 
 
 
