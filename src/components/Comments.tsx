@@ -1,17 +1,9 @@
 import "../styles/App.css";
 import Comment from "./Comment";
+import { IComment } from "../utils/types"
 
 interface Props {
-    comment: Array<{
-        firstName: string
-        lastName: string
-        date: string
-        rate: number
-        comment: string
-        id: string
-        likes: number
-        dislikes: number
-    }>
+    comment: Array<IComment>
 }
 
 const Comments = ({ comment }: Props) => {

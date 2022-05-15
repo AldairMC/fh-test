@@ -1,21 +1,13 @@
 import "../styles/App.css";
 import { convertDate } from '../utils/helper';
 import ReactStars from 'react-stars'
+import { IComment } from "../utils/types";
 
 import Like from './Like';
 import Dislike from './Dislike';
 
 interface Props {
-    comment: {
-        firstName: string
-        lastName: string
-        date: string
-        rate: number
-        comment: string
-        id: string
-        likes: number
-        dislikes: number
-    }
+    comment: IComment
 }
 
 const Comment = ({ comment }: Props) => {
@@ -41,12 +33,15 @@ const Comment = ({ comment }: Props) => {
             </div>
             <div className="comment_like_dislike">
                 <div className="__like">
-                    <Like 
+                    <Like
+                        id={comment.id}
                         count={comment.likes}
                     />
                 </div>
                 <div className="__dislike">
-                    <Dislike />
+                    <Dislike 
+                        id={comment.id}
+                    />
                 </div>
             </div>
         </div>
