@@ -1,23 +1,16 @@
 import axios from 'axios'
 
-// interface Comment {
-//     items: {
-//         firstName: string
-//         lastName: string
-//         date: string
-//         rate: number
-//         comment: string
-//         id: string
-//         likes: number
-//         dislikes: number
-//     }[]
-//     count: number
-//     averageRate: number
-//     prevPage: null
-//     nextPage: string
-// }
-
-export const get_Comment = async () => {
+export const getComment = async () => {
     const { data } = await axios.get("https://fithubtest.free.beeceptor.com/reviews") 
+    return data
+}
+
+export const postLike = async (id: any) => {
+    const { data } = await axios.post(`https://fithubtest.free.beeceptor.com/reviews/${id}/like`)
+    return data
+}
+
+export const postDislike = async (id: any) => {
+    const { data } = await axios.post(`https://fithubtest.free.beeceptor.com/reviews/${id}/dislike`)
     return data
 }

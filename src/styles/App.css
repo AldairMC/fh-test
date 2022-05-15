@@ -1,5 +1,5 @@
 .container {
-    margin: 100px 20% 0 20%;
+    margin: 100px 20% 40px 20%;
     background-color: #fafafa;
     padding: 40px;
 }
@@ -31,7 +31,7 @@
     align-self: flex-start;
     padding-bottom: 15px;
     font-size: 12px;
-    border-bottom: 1px solid #c2c2c2;
+    border-bottom: 1px solid #EAEAEA;
 }
 
 
@@ -42,7 +42,7 @@
     padding-bottom: 20px;
     grid-template-rows: repeat(3, 1fr) 20% 20%;
     background-color: #fafafa;
-    border-bottom: 1px solid #c2c2c2;
+    border-bottom: 1px solid #EAEAEA;
 }
 
 .comment_name_date {
@@ -93,6 +93,19 @@
     font-weight: bold;
     justify-self: flex-start;
     align-self: center;
+    cursor: pointer;
+}
+
+.ver_mas {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.__icon {
+    padding-top: 20px;
+    justify-self: center;
+    align-self: center;
+    font-size: 12px;
     cursor: pointer;
 }
 

@@ -1,11 +1,11 @@
 import { useQuery } from "react-query";
-import { get_Comment } from "../api/api";
+import { getComment } from "../api/api";
 import ReactStars from 'react-stars';
 import Comments from './Comments'
 import "../styles/App.css";
 
 const App = (): any => {
-  const { data, isLoading }  = useQuery(["comments"], get_Comment) 
+  const { data, isLoading }  = useQuery(["comments"], getComment)
 
   if(isLoading){
     return <div>"Loading..."</div>
@@ -35,6 +35,13 @@ const App = (): any => {
       <Comments
         comment={data.items}
       />
+      {
+        data.nextPage && <div className="ver_mas">
+          <span className="__icon">
+            <u>Ver más</u> <i className="fa-solid fa-angle-down"></i>
+          </span>
+        </div>
+      }
     </div>
   );
 }
